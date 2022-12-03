@@ -10,7 +10,7 @@ index.use(cors())
 index.use(express.json());
 index.use(express.urlencoded({ extended: true }));
 
-index.post('/image/s3/updload', async (req: Request, res: Response) => {
+index.post('/image/s3/upload', async (req: Request, res: Response) => {
     try {
         const url = await getSignedUrl(req.body.key, req.body.path);
         res.send(url);
